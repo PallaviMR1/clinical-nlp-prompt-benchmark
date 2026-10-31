@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Comparative Evaluation of Prompt Engineering Techniques for Structured Information Extraction Using Local Large Language Models
 
 An empirical Natural Language Processing (NLP) research project and Alternative Assessment Tool (AAT) implementation.
@@ -98,3 +99,6 @@ Open `http://localhost:8501` in your browser.
 ## 📜 Academic Deliverables
 - Detailed academic research report: [`NLP_AAT_Report.md`](NLP_AAT_Report.md)
 - Complete presentation slides: [`NLP_AAT_Presentation.md`](NLP_AAT_Presentation.md)
+=======
+# clinical-nlp-prompt-benchmark
+>>>>>>> b40213325c7cfd9099c37899ed5af604cfd67b36

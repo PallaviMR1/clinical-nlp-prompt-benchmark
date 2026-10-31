@@ -1,0 +1,2248 @@
+{
+  "individual_runs": [
+    {
+      "case_id": "CASE_001",
+      "category": "Endocrinology / Cardiology",
+      "technique": "Zero-Shot",
+      "latency_sec": 15.738,
+      "tokens_per_sec": 28.06,
+      "prompt_tokens": 252,
+      "completion_tokens": 380,
+      "total_tokens": 632,
+      "strict_json_valid": 0.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 62,
+          "gender": "Male",
+          "diagnoses": [
+            {
+              "condition": "Type 2 Diabetes Mellitus",
+              "severity": "Well-controlled"
+            },
+            {
+              "condition": "Essential Hypertension",
+              "severity": "Well-controlled"
+            }
+          ],
+          "symptoms": [
+            "Bilateral lower extremity paresthesia",
+            "Burning foot sensations",
+            "Blurred vision"
+          ],
+          "physical_exam": {
+            "vibration_sensation": "Diminished"
+          },
+          "lab_results": [
+            {
+              "HbA1c": 9.4,
+              "Fasting_Blood_Glucose": "198 mg/dL",
+              "BP": "148/92 mmHg"
+            }
+          ],
+          "diagnosis": {
+            "primary": "Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus",
+            "severity": "Severe"
+          },
+          "management_plan": [
+            {
+              "medication": "Metformin 1000 mg PO BID",
+              "description": "Titrate to 1000 mg PO BID"
+            },
+            {
+              "medication": "Duloxetine 30 mg PO once daily",
+              "description": "Add Duloxetine for neuropathic pain"
+            },
+            {
+              "medication": "Lisinopril 20 mg PO daily",
+              "description": "Continue Lisinopril 20 mg PO daily"
+            }
+          ],
+          "follow_up": {
+            "frequency": "30 days",
+            "action": "Repeat glycemic profile"
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 62,\n    \"gender\": \"Male\",\n    \"diagnoses\": [\n      {\n        \"condition\": \"Type 2 Diabetes Mellitus\",\n        \"severity\": \"Well-controlled\"\n      },\n      {\n        \"condition\": \"Essential Hypertension\",\n        \"severity\": \"Well-controlled\"\n      }\n    ],\n    \"symptoms\": [\n      \"Bilateral lower extremity paresthesia\",\n      \"Burning foot sensations\",\n      \"Blurred vision\"\n    ],\n    \"physical_exam\": {\n      \"vibration_sensation\": \"Diminished\"\n    },\n    \"lab_results\": [\n      {\n        \"HbA1c\": 9.4,\n        \"Fasting_Blood_Glucose\": 198 mg/dL,\n        \"BP\": 148/92 mmHg\n      }\n    ],\n    \"diagnosis\": {\n      \"primary\": \"Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus\",\n      \"severity\": \"Severe\"\n    },\n    \"management_plan\": [\n      {\n        \"medication\": \"Metformin 1000 mg PO BID\",\n        \"description\": \"Titrate to 1000 mg PO BID\"\n      },\n      {\n        \"medication\": \"Duloxetine 30 mg PO once daily\",\n        \"description\": \"Add Duloxetine for neuropathic pain\"\n      },\n      {\n        \"medication\": \"Lisinopril 20 mg PO daily\",\n        \"description\": \"Continue Lisinopril 20 mg PO daily\"\n      }\n    ],\n    \"follow_up\": {\n      \"frequency\": \"30 days\",\n      \"action\": \"Repeat glycemic profile\"\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_001",
+      "category": "Endocrinology / Cardiology",
+      "technique": "Few-Shot",
+      "latency_sec": 11.714,
+      "tokens_per_sec": 25.33,
+      "prompt_tokens": 976,
+      "completion_tokens": 241,
+      "total_tokens": 1217,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.875,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 62,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus",
+        "severity_level": "Severe",
+        "symptoms": [
+          "bilateral lower extremity paresthesia",
+          "burning foot sensations",
+          "blurred vision"
+        ],
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000 mg PO BID"
+          },
+          {
+            "name": "Duloxetine",
+            "dosage": "30 mg PO once daily"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "20 mg PO daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "hba1c": "9.4%",
+          "fasting blood glucose": "198 mg/dL",
+          "blood_pressure": "148/92 mmHg"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 62,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"bilateral lower extremity paresthesia\",\n    \"burning foot sensations\",\n    \"blurred vision\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Metformin\",\n      \"dosage\": \"1000 mg PO BID\"\n    },\n    {\n      \"name\": \"Duloxetine\",\n      \"dosage\": \"30 mg PO once daily\"\n    },\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"20 mg PO daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"hba1c\": \"9.4%\",\n    \"fasting blood glucose\": \"198 mg/dL\",\n    \"blood_pressure\": \"148/92 mmHg\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_001",
+      "category": "Endocrinology / Cardiology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 20.048,
+      "tokens_per_sec": 24.94,
+      "prompt_tokens": 953,
+      "completion_tokens": 445,
+      "total_tokens": 1398,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.875,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 62,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus",
+        "severity_level": "Severe",
+        "symptoms": [
+          "bilateral lower extremity paresthesia",
+          "burning foot sensations",
+          "blurred vision"
+        ],
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000 mg BID"
+          },
+          {
+            "name": "Duloxetine",
+            "dosage": "30 mg once daily"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "20 mg daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "hemoglobin_a1c": "9.4%",
+          "fasting_blood_glucose": "198 mg/dL",
+          "blood_pressure": "148/92 mmHg"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "1. Demographics: 62-year-old male -> age=62, gender='Male'.\n2. Symptoms: Stated bilateral lower extremity paresthesia, burning foot sensations, blurred vision. Negated symptoms: chest pain, palpitations, orthopnea, ankle edema (must be excluded).\n3. Diagnosis: Assessment explicitly states 'Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus'.\n4. Severity: 'severe' -> severity_level='Severe'.\n5. Medications: Metformin 1000 mg BID, Duloxetine 30 mg once daily, Lisinopril 20 mg daily.\n6. Vitals/Labs: HbA1c 9.4%, Fasting Blood Glucose 198 mg/dL, BP 148/92 mmHg.\n7. Follow-up: 'in 30 days' -> follow_up_days=30.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 62,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"bilateral lower extremity paresthesia\",\n    \"burning foot sensations\",\n    \"blurred vision\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Metformin\",\n      \"dosage\": \"1000 mg BID\"\n    },\n    {\n      \"name\": \"Duloxetine\",\n      \"dosage\": \"30 mg once daily\"\n    },\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"20 mg daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"hemoglobin_a1c\": \"9.4%\",\n    \"fasting_blood_glucose\": \"198 mg/dL\",\n    \"blood_pressure\": \"148/92 mmHg\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_001",
+      "category": "Endocrinology / Cardiology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 11.72,
+      "tokens_per_sec": 26.98,
+      "prompt_tokens": 539,
+      "completion_tokens": 257,
+      "total_tokens": 796,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.875,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 62,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus",
+        "severity_level": "Severe",
+        "symptoms": [
+          "blurred vision",
+          "burning foot sensations",
+          "bilateral lower extremity paresthesia"
+        ],
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000 mg PO BID",
+            "frequency": "daily"
+          },
+          {
+            "name": "Duloxetine",
+            "dosage": "30 mg PO once daily",
+            "frequency": "daily"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "20 mg PO daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "HbA1c": "9.4%",
+          "Fasting Blood Glucose": "198 mg/dL",
+          "BP": "148/92 mmHg"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 62,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\"blurred vision\", \"burning foot sensations\", \"bilateral lower extremity paresthesia\"],\n  \"medications\": [\n    {\n      \"name\": \"Metformin\",\n      \"dosage\": \"1000 mg PO BID\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Duloxetine\",\n      \"dosage\": \"30 mg PO once daily\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"20 mg PO daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"HbA1c\": \"9.4%\",\n    \"Fasting Blood Glucose\": \"198 mg/dL\",\n    \"BP\": \"148/92 mmHg\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_001",
+      "category": "Endocrinology / Cardiology",
+      "technique": "Role-Expert",
+      "latency_sec": 12.048,
+      "tokens_per_sec": 27.11,
+      "prompt_tokens": 612,
+      "completion_tokens": 267,
+      "total_tokens": 879,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.4,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.85,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 62,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus, assessed as severe",
+        "severity_level": "Severe",
+        "symptoms": [
+          "Bilateral lower extremity paresthesia",
+          "Burning foot sensations",
+          "Blurred vision"
+        ],
+        "medications": [
+          {
+            "name": "Metformin",
+            "dosage": "1000 mg PO BID",
+            "frequency": "daily"
+          },
+          {
+            "name": "Duloxetine",
+            "dosage": "30 mg PO once daily",
+            "frequency": "daily"
+          },
+          {
+            "name": "Lisinopril",
+            "dosage": "20 mg PO daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "HbA1c": "9.4%",
+          "Fasting Blood Glucose": "198 mg/dL",
+          "BP": "148/92 mmHg"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 62,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Diabetic Peripheral Neuropathy secondary to Type 2 Diabetes Mellitus, assessed as severe\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"Bilateral lower extremity paresthesia\",\n    \"Burning foot sensations\",\n    \"Blurred vision\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Metformin\",\n      \"dosage\": \"1000 mg PO BID\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Duloxetine\",\n      \"dosage\": \"30 mg PO once daily\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"20 mg PO daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"HbA1c\": \"9.4%\",\n    \"Fasting Blood Glucose\": \"198 mg/dL\",\n    \"BP\": \"148/92 mmHg\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_002",
+      "category": "Pulmonology",
+      "technique": "Zero-Shot",
+      "latency_sec": 18.585,
+      "tokens_per_sec": 28.96,
+      "prompt_tokens": 272,
+      "completion_tokens": 416,
+      "total_tokens": 688,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.1429,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 1.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 45,
+          "gender": "female"
+        },
+        "symptoms": {
+          "cough": "worsening productive cough with yellow sputum",
+          "chest_pain": "pleuritic right-sided chest pain",
+          "fever": "subjective fever",
+          "dyspnea": "moderate dyspnea on exertion",
+          "hemoptysis": "hemoptysis",
+          "calf_swelling": "calf swelling",
+          "wheezing": "wheezing",
+          "confusion": "confusion"
+        },
+        "vitals": {
+          "temperature": 38.6,
+          "blood_pressure": {
+            "systolic": 118,
+            "diastolic": 76
+          },
+          "pulse": 102,
+          "oxygen_saturation": 93
+        },
+        "chest_auscultation": {
+          "right_lower_lobe": {
+            "bronchial_breath": "bronchial breath sounds",
+            "crackles": "crackles"
+          }
+        },
+        "chest_xray": {
+          "consolidation": "right lower lobe consolidation",
+          "severity": "moderate"
+        },
+        "prescription": {
+          "antibiotics": {
+            "amoxicillin-clavulanate": {
+              "dosage": "875/125 mg PO BID for 7 days"
+            },
+            "azithromycin": {
+              "day_1": "500 mg",
+              "day_2_4": "250 mg daily"
+            }
+          },
+          "follow_up": {
+            "days": 5,
+            "instructions": "follow up in 5 days or proceed to the ED if SpO2 drops below 92%"
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 45,\n    \"gender\": \"female\"\n  },\n  \"symptoms\": {\n    \"cough\": \"worsening productive cough with yellow sputum\",\n    \"chest_pain\": \"pleuritic right-sided chest pain\",\n    \"fever\": \"subjective fever\",\n    \"dyspnea\": \"moderate dyspnea on exertion\",\n    \"hemoptysis\": \"hemoptysis\",\n    \"calf_swelling\": \"calf swelling\",\n    \"wheezing\": \"wheezing\",\n    \"confusion\": \"confusion\"\n  },\n  \"vitals\": {\n    \"temperature\": 38.6,\n    \"blood_pressure\": {\n      \"systolic\": 118,\n      \"diastolic\": 76\n    },\n    \"pulse\": 102,\n    \"oxygen_saturation\": 93\n  },\n  \"chest_auscultation\": {\n    \"right_lower_lobe\": {\n      \"bronchial_breath\": \"bronchial breath sounds\",\n      \"crackles\": \"crackles\"\n    }\n  },\n  \"chest_xray\": {\n    \"consolidation\": \"right lower lobe consolidation\",\n    \"severity\": \"moderate\"\n  },\n  \"prescription\": {\n    \"antibiotics\": {\n      \"amoxicillin-clavulanate\": {\n        \"dosage\": \"875/125 mg PO BID for 7 days\"\n      },\n      \"azithromycin\": {\n        \"day_1\": \"500 mg\",\n        \"day_2_4\": \"250 mg daily\"\n      }\n    },\n    \"follow_up\": {\n      \"days\": 5,\n      \"instructions\": \"follow up in 5 days or proceed to the ED if SpO2 drops below 92%\"\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_002",
+      "category": "Pulmonology",
+      "technique": "Few-Shot",
+      "latency_sec": 14.846,
+      "tokens_per_sec": 25.8,
+      "prompt_tokens": 997,
+      "completion_tokens": 272,
+      "total_tokens": 1269,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8889,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9722,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 45,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Community-Acquired Pneumonia",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "worsening productive cough with yellow sputum",
+          "pleuritic right-sided chest pain",
+          "subjective fever",
+          "moderate dyspnea on exertion"
+        ],
+        "medications": [
+          {
+            "name": "Amoxicillin-clavulanate",
+            "dosage": "875/125 mg PO BID",
+            "frequency": "7 days"
+          },
+          {
+            "name": "Azithromycin",
+            "dosage": "500 mg day 1 then 250 mg daily",
+            "frequency": "4 days"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.6 C (101.5 F)",
+          "blood_pressure": "118/76 mmHg",
+          "heart_rate": "102 bpm",
+          "oxygen_saturation": "93% on room air"
+        },
+        "follow_up_days": 5
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 45,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Community-Acquired Pneumonia\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\n    \"worsening productive cough with yellow sputum\",\n    \"pleuritic right-sided chest pain\",\n    \"subjective fever\",\n    \"moderate dyspnea on exertion\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Amoxicillin-clavulanate\",\n      \"dosage\": \"875/125 mg PO BID\",\n      \"frequency\": \"7 days\"\n    },\n    {\n      \"name\": \"Azithromycin\",\n      \"dosage\": \"500 mg day 1 then 250 mg daily\",\n      \"frequency\": \"4 days\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.6 C (101.5 F)\",\n    \"blood_pressure\": \"118/76 mmHg\",\n    \"heart_rate\": \"102 bpm\",\n    \"oxygen_saturation\": \"93% on room air\"\n  },\n  \"follow_up_days\": 5\n}\n```"
+    },
+    {
+      "case_id": "CASE_002",
+      "category": "Pulmonology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 23.606,
+      "tokens_per_sec": 25.62,
+      "prompt_tokens": 973,
+      "completion_tokens": 494,
+      "total_tokens": 1467,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8889,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9722,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 45,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Community-Acquired Pneumonia",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "productive cough with yellow sputum",
+          "pleuritic right-sided chest pain",
+          "fever",
+          "moderate dyspnea on exertion"
+        ],
+        "medications": [
+          {
+            "name": "Amoxicillin-clavulanate",
+            "dosage": "875/125 mg PO BID",
+            "frequency": "every 24 hours"
+          },
+          {
+            "name": "Azithromycin",
+            "dosage": "500 mg day 1 then 250 mg daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.6 C (101.5 F)",
+          "blood_pressure": "118/76 mmHg",
+          "heart_rate": "102 bpm",
+          "oxygen_saturation": "93% on room air"
+        },
+        "follow_up_days": 5
+      },
+      "raw_response": "1. Demographics: 45-year-old female -> age=45, gender='Female'.\n2. Symptoms: Productive cough with yellow sputum, pleuritic right-sided chest pain, fever, moderate dyspnea on exertion. Negated symptoms: hemoptysis, calf swelling, wheezing, confusion (must be excluded).\n3. Diagnosis: Assessment explicitly states 'Community-Acquired Pneumonia'.\n4. Severity: 'moderate severity' -> severity_level='Moderate'.\n5. Medications: Amoxicillin-clavulanate 875/125 mg PO BID, Azithromycin 500 mg day 1 then 250 mg daily.\n6. Vitals/Labs: Temperature 38.6 C (101.5 F), BP 118/76 mmHg, pulse 102 bpm, SpO2 93% on room air.\n7. Follow-up: 'in 5 days' -> follow_up_days=5.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 45,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Community-Acquired Pneumonia\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\n    \"productive cough with yellow sputum\",\n    \"pleuritic right-sided chest pain\",\n    \"fever\",\n    \"moderate dyspnea on exertion\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Amoxicillin-clavulanate\",\n      \"dosage\": \"875/125 mg PO BID\",\n      \"frequency\": \"every 24 hours\"\n    },\n    {\n      \"name\": \"Azithromycin\",\n      \"dosage\": \"500 mg day 1 then 250 mg daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.6 C (101.5 F)\",\n    \"blood_pressure\": \"118/76 mmHg\",\n    \"heart_rate\": \"102 bpm\",\n    \"oxygen_saturation\": \"93% on room air\"\n  },\n  \"follow_up_days\": 5\n}\n```"
+    },
+    {
+      "case_id": "CASE_002",
+      "category": "Pulmonology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 14.394,
+      "tokens_per_sec": 27.97,
+      "prompt_tokens": 559,
+      "completion_tokens": 285,
+      "total_tokens": 844,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8889,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9722,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 45,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Community-Acquired Pneumonia",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "worsening productive cough with yellow sputum",
+          "pleuritic right-sided chest pain",
+          "subjective fever",
+          "moderate dyspnea on exertion"
+        ],
+        "medications": [
+          {
+            "name": "Amoxicillin-clavulanate 875/125 mg PO BID",
+            "dosage": "875/125 mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Azithromycin 500 mg day 1 then 250 mg daily",
+            "dosage": "500 mg day 1, 250 mg daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.6 C (101.5 F)",
+          "BP": "118/76 mmHg",
+          "pulse": "102 bpm",
+          "SpO2": "93% on room air"
+        },
+        "follow_up_days": 5
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 45,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Community-Acquired Pneumonia\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\"worsening productive cough with yellow sputum\", \"pleuritic right-sided chest pain\", \"subjective fever\", \"moderate dyspnea on exertion\"],\n  \"medications\": [\n    {\n      \"name\": \"Amoxicillin-clavulanate 875/125 mg PO BID\",\n      \"dosage\": \"875/125 mg\",\n      \"frequency\": \"BID\"\n    },\n    {\n      \"name\": \"Azithromycin 500 mg day 1 then 250 mg daily\",\n      \"dosage\": \"500 mg day 1, 250 mg daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.6 C (101.5 F)\",\n    \"BP\": \"118/76 mmHg\",\n    \"pulse\": \"102 bpm\",\n    \"SpO2\": \"93% on room air\"\n  },\n  \"follow_up_days\": 5\n}\n```"
+    },
+    {
+      "case_id": "CASE_002",
+      "category": "Pulmonology",
+      "technique": "Role-Expert",
+      "latency_sec": 16.414,
+      "tokens_per_sec": 27.76,
+      "prompt_tokens": 632,
+      "completion_tokens": 340,
+      "total_tokens": 972,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8889,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8722,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 45,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Community-Acquired Pneumonia",
+        "severity_level": "Severe",
+        "symptoms": [
+          "worsening productive cough with yellow sputum",
+          "pleuritic right-sided chest pain",
+          "subjective fever",
+          "moderate dyspnea on exertion"
+        ],
+        "medications": [
+          {
+            "name": "Amoxicillin-clavulanate 875/125 mg PO BID",
+            "dosage": "875/125 mg",
+            "frequency": "BID"
+          },
+          {
+            "name": "Azithromycin 500 mg day 1 then 250 mg daily",
+            "dosage": "500 mg day 1, 250 mg daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.6 C (101.5 F)",
+          "BP": "118/76 mmHg",
+          "pulse": "102 bpm",
+          "SpO2": "93% on room air",
+          "chest_auscultation": "right lower lobe bronchial breath sounds and crackles",
+          "chest_xray": "right lower lobe consolidation consistent with Community-Acquired Pneumonia, moderate severity"
+        },
+        "follow_up_days": 5
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 45,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Community-Acquired Pneumonia\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"worsening productive cough with yellow sputum\",\n    \"pleuritic right-sided chest pain\",\n    \"subjective fever\",\n    \"moderate dyspnea on exertion\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Amoxicillin-clavulanate 875/125 mg PO BID\",\n      \"dosage\": \"875/125 mg\",\n      \"frequency\": \"BID\"\n    },\n    {\n      \"name\": \"Azithromycin 500 mg day 1 then 250 mg daily\",\n      \"dosage\": \"500 mg day 1, 250 mg daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.6 C (101.5 F)\",\n    \"BP\": \"118/76 mmHg\",\n    \"pulse\": \"102 bpm\",\n    \"SpO2\": \"93% on room air\",\n    \"chest_auscultation\": \"right lower lobe bronchial breath sounds and crackles\",\n    \"chest_xray\": \"right lower lobe consolidation consistent with Community-Acquired Pneumonia, moderate severity\"\n  },\n  \"follow_up_days\": 5\n}\n```"
+    },
+    {
+      "case_id": "CASE_003",
+      "category": "Cardiology",
+      "technique": "Zero-Shot",
+      "latency_sec": 15.479,
+      "tokens_per_sec": 29.2,
+      "prompt_tokens": 281,
+      "completion_tokens": 328,
+      "total_tokens": 609,
+      "strict_json_valid": 0.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": "Failed to extract valid JSON payload: Expecting ',' delimiter: line 21 column 34 (char 485)",
+      "parsed_output": {},
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 71,\n    \"gender\": \"female\",\n    \"symptoms\": {\n      \"pedal_edema\": \"progressive bilateral\",\n      \"orthopnea\": \"requiring 3 pillows\",\n      \"nocturnal_dyspnea\": \"paroxysmal\",\n      \"weight_gain\": \"4 kg\"\n    },\n    \"vitals\": {\n      \"blood_pressure\": {\n        \"systolic\": 154,\n        \"diastolic\": 90\n      },\n      \"heart_rate\": 88,\n      \"respiratory_rate\": 22,\n      \"oxygen_saturation\": 91\n    },\n    \"physical_exam\": {\n      \"jugular_vein_pressure\": 8 cm above sternal angle,\n      \"crackles\": \"bilateral bibasilar\"\n    },\n    \"lab_results\": {\n      \"nt-proBNP\": 3450 pg/mL\n    },\n    \"assessment\": {\n      \"acute_decompensated_heart_failure\": \"with preserved ejection fraction\",\n      \"clinical_status\": \"severe\",\n      \"medications\": [\n        \"adjusted_furosemide_80 mg PO BID\",\n        \"spironolactone_25 mg daily\",\n        \"metoprolol_succinate_50 mg daily\"\n      ],\n      \"fluid_restrictions\": \"strict\",\n      \"return_to_clinic\": \"mandatory in 7 days for electrolyte check\"\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_003",
+      "category": "Cardiology",
+      "technique": "Few-Shot",
+      "latency_sec": 14.362,
+      "tokens_per_sec": 26.08,
+      "prompt_tokens": 1005,
+      "completion_tokens": 262,
+      "total_tokens": 1267,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.8571,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9643,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 71,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Decompensated Heart Failure",
+        "severity_level": "Severe",
+        "symptoms": [
+          "progressive bilateral pedal edema",
+          "orthopnea requiring 3 pillows",
+          "paroxysmal nocturnal dyspnea"
+        ],
+        "medications": [
+          {
+            "name": "Furosemide",
+            "dosage": "80 mg PO BID"
+          },
+          {
+            "name": "Spironolactone",
+            "dosage": "25 mg daily"
+          },
+          {
+            "name": "Metoprolol Succinate",
+            "dosage": "50 mg daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "blood_pressure": "154/90 mmHg",
+          "heart_rate": "88 bpm",
+          "respiratory_rate": "22/min",
+          "oxygen_saturation": "91% on room air"
+        },
+        "fluid_restrictions": "1.5 L/day",
+        "follow_up_days": 7
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 71,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Decompensated Heart Failure\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"progressive bilateral pedal edema\",\n    \"orthopnea requiring 3 pillows\",\n    \"paroxysmal nocturnal dyspnea\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Furosemide\",\n      \"dosage\": \"80 mg PO BID\"\n    },\n    {\n      \"name\": \"Spironolactone\",\n      \"dosage\": \"25 mg daily\"\n    },\n    {\n      \"name\": \"Metoprolol Succinate\",\n      \"dosage\": \"50 mg daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"blood_pressure\": \"154/90 mmHg\",\n    \"heart_rate\": \"88 bpm\",\n    \"respiratory_rate\": \"22/min\",\n    \"oxygen_saturation\": \"91% on room air\"\n  },\n  \"fluid_restrictions\": \"1.5 L/day\",\n  \"follow_up_days\": 7\n}\n```"
+    },
+    {
+      "case_id": "CASE_003",
+      "category": "Cardiology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 26.506,
+      "tokens_per_sec": 25.47,
+      "prompt_tokens": 982,
+      "completion_tokens": 560,
+      "total_tokens": 1542,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.6667,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9167,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 71,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Decompensated Heart Failure with preserved ejection fraction",
+        "severity_level": "Severe",
+        "symptoms": [
+          "progressive bilateral pedal edema",
+          "orthopnea requiring 3 pillows",
+          "paroxysmal nocturnal dyspnea",
+          "weight gain (4 kg)"
+        ],
+        "medications": [
+          {
+            "name": "Furosemide",
+            "dosage": "80 mg BID"
+          },
+          {
+            "name": "Spironolactone",
+            "dosage": "25 mg daily"
+          },
+          {
+            "name": "Metoprolol Succinate",
+            "dosage": "50 mg daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "blood_pressure": "154/90 mmHg",
+          "heart_rate": "88 bpm",
+          "respiratory_rate": "22/min",
+          "oxygen_saturation": "91% on room air",
+          "jugular_vein": "8 cm above sternal angle",
+          "bilateral_bibasilar_crackles": "bilateral bibasilar crackles",
+          "serum_nt-probnp": "3,450 pg/mL"
+        },
+        "follow_up_days": 7
+      },
+      "raw_response": "1. Demographics: 71-year-old female -> age=71, gender='Female'.\n2. Symptoms: Progressive bilateral pedal edema, orthopnea requiring 3 pillows, paroxysmal nocturnal dyspnea, weight gain (4 kg). Negated symptoms: acute angina, syncope, fever, productive cough.\n3. Diagnosis: Assessment explicitly states 'Acute Decompensated Heart Failure with preserved ejection fraction'.\n4. Severity: 'severe clinical status' -> severity_level='Severe'.\n5. Medications: Furosemide 80 mg BID, Spironolactone 25 mg daily, Metoprolol Succinate 50 mg daily.\n6. Vitals/Labs: BP 154/90 mmHg, HR 88 bpm, RR 22/min, SpO2 91% on room air. JVP 8 cm, bilateral bibasilar crackles. Serum NT-proBNP 3,450 pg/mL.\n7. Follow-up: 'mandatory clinic return in 7 days for electrolyte check' -> follow_up_days=7.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 71,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Decompensated Heart Failure with preserved ejection fraction\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"progressive bilateral pedal edema\",\n    \"orthopnea requiring 3 pillows\",\n    \"paroxysmal nocturnal dyspnea\",\n    \"weight gain (4 kg)\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Furosemide\",\n      \"dosage\": \"80 mg BID\"\n    },\n    {\n      \"name\": \"Spironolactone\",\n      \"dosage\": \"25 mg daily\"\n    },\n    {\n      \"name\": \"Metoprolol Succinate\",\n      \"dosage\": \"50 mg daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"blood_pressure\": \"154/90 mmHg\",\n    \"heart_rate\": \"88 bpm\",\n    \"respiratory_rate\": \"22/min\",\n    \"oxygen_saturation\": \"91% on room air\",\n    \"jugular_vein\": \"8 cm above sternal angle\",\n    \"bilateral_bibasilar_crackles\": \"bilateral bibasilar crackles\",\n    \"serum_nt-probnp\": \"3,450 pg/mL\"\n  },\n  \"follow_up_days\": 7\n}\n```"
+    },
+    {
+      "case_id": "CASE_003",
+      "category": "Cardiology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 15.494,
+      "tokens_per_sec": 26.17,
+      "prompt_tokens": 568,
+      "completion_tokens": 293,
+      "total_tokens": 861,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 1.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 71,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Decompensated Heart Failure",
+        "severity_level": "Severe",
+        "symptoms": [
+          "bilateral pedal edema",
+          "orthopnea requiring 3 pillows",
+          "paroxysmal nocturnal dyspnea",
+          "recent 4 kg weight gain"
+        ],
+        "medications": [
+          {
+            "name": "Furosemide",
+            "dosage": "80 mg PO BID",
+            "frequency": "daily"
+          },
+          {
+            "name": "Spironolactone",
+            "dosage": "25 mg daily",
+            "frequency": "daily"
+          },
+          {
+            "name": "Metoprolol Succinate",
+            "dosage": "50 mg daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "BP": "154/90 mmHg",
+          "HR": "88 bpm",
+          "RR": "22/min",
+          "SpO2": "91% on room air",
+          "JVP": "8 cm above sternal angle",
+          "bilateral bibasilar crackles": "elevated"
+        },
+        "follow_up_days": 7
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 71,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Decompensated Heart Failure\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\"bilateral pedal edema\", \"orthopnea requiring 3 pillows\", \"paroxysmal nocturnal dyspnea\", \"recent 4 kg weight gain\"],\n  \"medications\": [\n    {\n      \"name\": \"Furosemide\",\n      \"dosage\": \"80 mg PO BID\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Spironolactone\",\n      \"dosage\": \"25 mg daily\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Metoprolol Succinate\",\n      \"dosage\": \"50 mg daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"BP\": \"154/90 mmHg\",\n    \"HR\": \"88 bpm\",\n    \"RR\": \"22/min\",\n    \"SpO2\": \"91% on room air\",\n    \"JVP\": \"8 cm above sternal angle\",\n    \"bilateral bibasilar crackles\": \"elevated\"\n  },\n  \"follow_up_days\": 7\n}\n```"
+    },
+    {
+      "case_id": "CASE_003",
+      "category": "Cardiology",
+      "technique": "Role-Expert",
+      "latency_sec": 16.011,
+      "tokens_per_sec": 27.23,
+      "prompt_tokens": 641,
+      "completion_tokens": 320,
+      "total_tokens": 961,
+      "strict_json_valid": 0.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": "Failed to extract valid JSON payload: Expecting ':' delimiter: line 36 column 35 (char 863)",
+      "parsed_output": {},
+      "raw_response": "```json\n{\n  \"patient_age\": 71,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Decompensated Heart Failure\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"Progressive bilateral pedal edema\",\n    \"Orthopnea requiring 3 pillows\",\n    \"Paroxysmal nocturnal dyspnea\",\n    \"4 kg weight gain\",\n    \"Preserved ejection fraction\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Furosemide\",\n      \"dosage\": \"80 mg PO BID\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Spironolactone\",\n      \"dosage\": \"25 mg daily\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Metoprolol Succinate\",\n      \"dosage\": \"50 mg daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"BP\": \"154/90 mmHg\",\n    \"HR\": \"88 bpm\",\n    \"RR\": \"22/min\",\n    \"SpO2\": \"91% on room air\",\n    \"JVP\": \"8 cm above sternal angle\",\n    \"bilateral bibasilar crackles\",\n    \"Serum NT-proBNP\": \"3,450 pg/mL\"\n  },\n  \"follow_up_days\": 7\n}\n```"
+    },
+    {
+      "case_id": "CASE_004",
+      "category": "Neurology",
+      "technique": "Zero-Shot",
+      "latency_sec": 15.018,
+      "tokens_per_sec": 29.21,
+      "prompt_tokens": 232,
+      "completion_tokens": 326,
+      "total_tokens": 558,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 28,
+          "gender": "female",
+          "symptoms": {
+            "headache": {
+              "type": "throbbing unilateral left frontotemporal",
+              "duration": "18 hours",
+              "symptoms": [
+                "photophobia",
+                "phonophobia",
+                "nausea",
+                "non-bilious emesis"
+              ]
+            },
+            "vitals": {
+              "blood_pressure": {
+                "systolic": 122,
+                "diastolic": 78
+              },
+              "heart_rate": 72,
+              "temperature": "afebrile"
+            },
+            "neurological_exam": {
+              "findings": "non-focal"
+            },
+            "diagnosis": {
+              "type": "Acute Migraine Headache without aura",
+              "severity": "moderate to severe intensity"
+            },
+            "treatment": {
+              "sumatriptan": {
+                "dose": "50 mg PO single dose"
+              },
+              "ondansetron": {
+                "dose": "4 mg ODT"
+              },
+              "naproxen": {
+                "dose": "500 mg PRN for breakthrough pain"
+              }
+            },
+            "follow-up": {
+              "scheduled": "60 days",
+              "reason": "to discuss prophylactic Topiramate if attacks exceed 4 per month"
+            }
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 28,\n    \"gender\": \"female\",\n    \"symptoms\": {\n      \"headache\": {\n        \"type\": \"throbbing unilateral left frontotemporal\",\n        \"duration\": \"18 hours\",\n        \"symptoms\": [\n          \"photophobia\",\n          \"phonophobia\",\n          \"nausea\",\n          \"non-bilious emesis\"\n        ]\n      },\n      \"vitals\": {\n        \"blood_pressure\": {\n          \"systolic\": 122,\n          \"diastolic\": 78\n        },\n        \"heart_rate\": 72,\n        \"temperature\": \"afebrile\"\n      },\n      \"neurological_exam\": {\n        \"findings\": \"non-focal\"\n      },\n      \"diagnosis\": {\n        \"type\": \"Acute Migraine Headache without aura\",\n        \"severity\": \"moderate to severe intensity\"\n      },\n      \"treatment\": {\n        \"sumatriptan\": {\n          \"dose\": \"50 mg PO single dose\"\n        },\n        \"ondansetron\": {\n          \"dose\": \"4 mg ODT\"\n        },\n        \"naproxen\": {\n          \"dose\": \"500 mg PRN for breakthrough pain\"\n        }\n      },\n      \"follow-up\": {\n        \"scheduled\": \"60 days\",\n        \"reason\": \"to discuss prophylactic Topiramate if attacks exceed 4 per month\"\n      }\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_004",
+      "category": "Neurology",
+      "technique": "Few-Shot",
+      "latency_sec": 12.697,
+      "tokens_per_sec": 28.37,
+      "prompt_tokens": 956,
+      "completion_tokens": 248,
+      "total_tokens": 1204,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.75,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.75,
+      "symptoms_recall": 0.6,
+      "symptoms_f1": 0.6667,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8542,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 28,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Migraine Headache without aura",
+        "severity_level": "Moderate to severe",
+        "symptoms": [
+          "throbbing unilateral left frontotemporal headache",
+          "severe photophobia",
+          "severe phonophobia",
+          "severe nausea with two episodes of non-bilious emesis"
+        ],
+        "medications": [
+          {
+            "name": "Sumatriptan",
+            "dosage": "50 mg PO single dose"
+          },
+          {
+            "name": "Ondansetron",
+            "dosage": "4 mg ODT"
+          },
+          {
+            "name": "Naproxen sodium",
+            "dosage": "500 mg PRN"
+          }
+        ],
+        "vitals_and_labs": {
+          "blood_pressure": "122/78 mmHg",
+          "heart_rate": "72 bpm",
+          "temperature": "afebrile"
+        },
+        "follow_up_days": 60
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 28,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Migraine Headache without aura\",\n  \"severity_level\": \"Moderate to severe\",\n  \"symptoms\": [\n    \"throbbing unilateral left frontotemporal headache\",\n    \"severe photophobia\",\n    \"severe phonophobia\",\n    \"severe nausea with two episodes of non-bilious emesis\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sumatriptan\",\n      \"dosage\": \"50 mg PO single dose\"\n    },\n    {\n      \"name\": \"Ondansetron\",\n      \"dosage\": \"4 mg ODT\"\n    },\n    {\n      \"name\": \"Naproxen sodium\",\n      \"dosage\": \"500 mg PRN\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"blood_pressure\": \"122/78 mmHg\",\n    \"heart_rate\": \"72 bpm\",\n    \"temperature\": \"afebrile\"\n  },\n  \"follow_up_days\": 60\n}\n```"
+    },
+    {
+      "case_id": "CASE_004",
+      "category": "Neurology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 22.538,
+      "tokens_per_sec": 25.82,
+      "prompt_tokens": 933,
+      "completion_tokens": 478,
+      "total_tokens": 1411,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.75,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.8,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8875,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 28,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Migraine Headache without aura",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "throb[ing unilateral left frontotemporal headache]",
+          "severe photophobia",
+          "severe phonophobia",
+          "nausea",
+          "two episodes of non-bilious emesis"
+        ],
+        "medications": [
+          {
+            "name": "Sumatriptan",
+            "dosage": "50 mg PO single dose"
+          },
+          {
+            "name": "Ondansetron",
+            "dosage": "4 mg ODT"
+          },
+          {
+            "name": "Naproxen sodium",
+            "dosage": "500 mg PRN"
+          }
+        ],
+        "vitals_and_labs": {
+          "blood_pressure": "122/78 mmHg",
+          "heart_rate": "72 bpm",
+          "temperature": "afebrile"
+        },
+        "follow_up_days": 60
+      },
+      "raw_response": "1. Demographics: 28-year-old female -> age=28, gender='Female'.\n2. Symptoms: Throbbing unilateral left frontotemporal headache, severe photophobia, phonophobia, nausea, two episodes of non-bilious emesis. Negated symptoms: visual aura, neck stiffness, fever, focal motor weakness, speech impairment (must be excluded).\n3. Diagnosis: 'Acute Migraine Headache without aura, moderate to severe intensity' -> primary_diagnosis='Acute Migraine Headache without aura'.\n4. Severity: 'moderate to severe intensity' -> severity_level='Moderate'.\n5. Medications: Sumatriptan 50 mg PO single dose, Ondansetron 4 mg ODT, Naproxen sodium 500 mg PRN.\n6. Vitals/Labs: BP 122/78 mmHg, HR 72 bpm, afebrile.\n7. Follow-up: 'scheduled for neurological review in 60 days' -> follow_up_days=60.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 28,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Migraine Headache without aura\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\n    \"throb[ing unilateral left frontotemporal headache]\",\n    \"severe photophobia\",\n    \"severe phonophobia\",\n    \"nausea\",\n    \"two episodes of non-bilious emesis\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sumatriptan\",\n      \"dosage\": \"50 mg PO single dose\"\n    },\n    {\n      \"name\": \"Ondansetron\",\n      \"dosage\": \"4 mg ODT\"\n    },\n    {\n      \"name\": \"Naproxen sodium\",\n      \"dosage\": \"500 mg PRN\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"blood_pressure\": \"122/78 mmHg\",\n    \"heart_rate\": \"72 bpm\",\n    \"temperature\": \"afebrile\"\n  },\n  \"follow_up_days\": 60\n}\n```"
+    },
+    {
+      "case_id": "CASE_004",
+      "category": "Neurology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 14.023,
+      "tokens_per_sec": 28.16,
+      "prompt_tokens": 519,
+      "completion_tokens": 286,
+      "total_tokens": 805,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.6,
+      "symptoms_recall": 0.6,
+      "symptoms_f1": 0.6,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.775,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 28,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Migraine Headache without aura, moderate to severe intensity",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "throb",
+          "photophobia",
+          "phonophobia",
+          "nausea",
+          "episodes of non-bilious emesis"
+        ],
+        "medications": [
+          {
+            "name": "Sumatriptan",
+            "dosage": "50 mg PO single dose",
+            "frequency": "as prescribed"
+          },
+          {
+            "name": "Ondansetron",
+            "dosage": "4 mg ODT",
+            "frequency": "as prescribed"
+          },
+          {
+            "name": "Naproxen sodium",
+            "dosage": "500 mg PRN",
+            "frequency": "as prescribed"
+          }
+        ],
+        "vitals_and_labs": {
+          "BP": "122/78 mmHg",
+          "HR": "72 bpm",
+          "fever": "negative",
+          "neck_stiffness": "negative",
+          "focal_motor_weakness": "negative",
+          "speech_impairment": "negative"
+        },
+        "follow_up_days": 60
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 28,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Migraine Headache without aura, moderate to severe intensity\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\"throb\", \"photophobia\", \"phonophobia\", \"nausea\", \"episodes of non-bilious emesis\"],\n  \"medications\": [\n    {\n      \"name\": \"Sumatriptan\",\n      \"dosage\": \"50 mg PO single dose\",\n      \"frequency\": \"as prescribed\"\n    },\n    {\n      \"name\": \"Ondansetron\",\n      \"dosage\": \"4 mg ODT\",\n      \"frequency\": \"as prescribed\"\n    },\n    {\n      \"name\": \"Naproxen sodium\",\n      \"dosage\": \"500 mg PRN\",\n      \"frequency\": \"as prescribed\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"BP\": \"122/78 mmHg\",\n    \"HR\": \"72 bpm\",\n    \"fever\": \"negative\",\n    \"neck_stiffness\": \"negative\",\n    \"focal_motor_weakness\": \"negative\",\n    \"speech_impairment\": \"negative\"\n  },\n  \"follow_up_days\": 60\n}\n```"
+    },
+    {
+      "case_id": "CASE_004",
+      "category": "Neurology",
+      "technique": "Role-Expert",
+      "latency_sec": 15.008,
+      "tokens_per_sec": 28.4,
+      "prompt_tokens": 592,
+      "completion_tokens": 315,
+      "total_tokens": 907,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.3333,
+      "symptoms_recall": 0.6,
+      "symptoms_f1": 0.4286,
+      "medications_f1": 1.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.1111,
+      "overall_f1": 0.5655,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 28,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Acute Migraine Headache without aura, moderate to severe intensity",
+        "severity_level": "Severe",
+        "symptoms": [
+          "Throbbing unilateral left frontotemporal headache",
+          "Severe photophobia",
+          "Severe phonophobia",
+          "Severe nausea with two episodes of non-bilious emesis",
+          "No visual aura",
+          "No neck stiffness",
+          "No fever",
+          "No focal motor weakness",
+          "No speech impairment"
+        ],
+        "medications": [
+          {
+            "name": "Sumatriptan 50 mg PO single dose",
+            "dosage": "50 mg",
+            "frequency": "single dose"
+          },
+          {
+            "name": "Ondansetron 4 mg ODT",
+            "dosage": "4 mg",
+            "frequency": "ODT"
+          },
+          {
+            "name": "Naproxen sodium 500 mg PRN",
+            "dosage": "500 mg",
+            "frequency": "PRN"
+          }
+        ],
+        "vitals_and_labs": {
+          "BP": "122/78 mmHg",
+          "HR": "72 bpm",
+          "temperature": "afebrile"
+        },
+        "follow_up_days": null
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 28,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Acute Migraine Headache without aura, moderate to severe intensity\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"Throbbing unilateral left frontotemporal headache\",\n    \"Severe photophobia\",\n    \"Severe phonophobia\",\n    \"Severe nausea with two episodes of non-bilious emesis\",\n    \"No visual aura\",\n    \"No neck stiffness\",\n    \"No fever\",\n    \"No focal motor weakness\",\n    \"No speech impairment\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sumatriptan 50 mg PO single dose\",\n      \"dosage\": \"50 mg\",\n      \"frequency\": \"single dose\"\n    },\n    {\n      \"name\": \"Ondansetron 4 mg ODT\",\n      \"dosage\": \"4 mg\",\n      \"frequency\": \"ODT\"\n    },\n    {\n      \"name\": \"Naproxen sodium 500 mg PRN\",\n      \"dosage\": \"500 mg\",\n      \"frequency\": \"PRN\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"BP\": \"122/78 mmHg\",\n    \"HR\": \"72 bpm\",\n    \"temperature\": \"afebrile\"\n  },\n  \"follow_up_days\": null\n}\n```"
+    },
+    {
+      "case_id": "CASE_005",
+      "category": "Gastroenterology",
+      "technique": "Zero-Shot",
+      "latency_sec": 15.767,
+      "tokens_per_sec": 29.63,
+      "prompt_tokens": 266,
+      "completion_tokens": 346,
+      "total_tokens": 612,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 18,
+          "gender": "Male",
+          "symptoms": [
+            "Acute periumbilical abdominal pain that migrated to the right lower quadrant over the past 12 hours",
+            "Anorexia",
+            "Low-grade pyrexia",
+            "Nausea"
+          ],
+          "vitals": {
+            "temperature": 38.1,
+            "pulse": 108,
+            "blood_pressure": {
+              "systolic": 124,
+              "diastolic": 82
+            }
+          },
+          "abdominal_exam": {
+            "McBurney's point tenderness": true,
+            "involuntary guarding": true,
+            "Rovsing's sign": true
+          },
+          "ultrasound_findings": {
+            "structure": {
+              "measurement": 8.5,
+              "description": "aperistaltic, non-compressible tubular structure with surrounding fat stranding"
+            }
+          },
+          "diagnosis": {
+            "condition": "Acute Appendicitis",
+            "severity": "Critical surgical condition"
+          },
+          "treatment": [
+            {
+              "drug": "IV Ceftriaxone 1 g",
+              "route": "stat"
+            },
+            {
+              "drug": "Metronidazole 500 mg",
+              "route": "stat"
+            }
+          ],
+          "follow_up": {
+            "inpatient_stay": true,
+            "outpatient_follow_up": "10 days"
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 18,\n    \"gender\": \"Male\",\n    \"symptoms\": [\n      \"Acute periumbilical abdominal pain that migrated to the right lower quadrant over the past 12 hours\",\n      \"Anorexia\",\n      \"Low-grade pyrexia\",\n      \"Nausea\"\n    ],\n    \"vitals\": {\n      \"temperature\": 38.1,\n      \"pulse\": 108,\n      \"blood_pressure\": {\n        \"systolic\": 124,\n        \"diastolic\": 82\n      }\n    },\n    \"abdominal_exam\": {\n      \"McBurney's point tenderness\": true,\n      \"involuntary guarding\": true,\n      \"Rovsing's sign\": true\n    },\n    \"ultrasound_findings\": {\n      \"structure\": {\n        \"measurement\": 8.5,\n        \"description\": \"aperistaltic, non-compressible tubular structure with surrounding fat stranding\"\n      }\n    },\n    \"diagnosis\": {\n      \"condition\": \"Acute Appendicitis\",\n      \"severity\": \"Critical surgical condition\"\n    },\n    \"treatment\": [\n      {\n        \"drug\": \"IV Ceftriaxone 1 g\",\n        \"route\": \"stat\"\n      },\n      {\n        \"drug\": \"Metronidazole 500 mg\",\n        \"route\": \"stat\"\n      }\n    ],\n    \"follow_up\": {\n      \"inpatient_stay\": true,\n      \"outpatient_follow_up\": \"10 days\"\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_005",
+      "category": "Gastroenterology",
+      "technique": "Few-Shot",
+      "latency_sec": 14.507,
+      "tokens_per_sec": 26.97,
+      "prompt_tokens": 990,
+      "completion_tokens": 277,
+      "total_tokens": 1267,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.8571,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.6,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.6667,
+      "medications_f1": 1.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8667,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 18,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Acute Appendicitis",
+        "severity_level": "Critical",
+        "symptoms": [
+          "acute periumbilical abdominal pain",
+          "migrating to the right lower quadrant",
+          "anorexia",
+          "low-grade pyrexia",
+          "nausea"
+        ],
+        "medications": [
+          {
+            "name": "IV Ceftriaxone",
+            "dosage": "1 g",
+            "frequency": "stat"
+          },
+          {
+            "name": "Metronidazole",
+            "dosage": "500 mg",
+            "frequency": "stat"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.1 C",
+          "heart_rate": "108 bpm",
+          "blood_pressure": "124/82 mmHg"
+        },
+        "diagnosis": "Acute Appendicitis",
+        "surgical_consult": "Yes",
+        "surgical_plan": "emergent laparoscopic appendectomy",
+        "inpatient_stay": "Yes",
+        "outpatient_follow_up": "10 days"
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 18,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Acute Appendicitis\",\n  \"severity_level\": \"Critical\",\n  \"symptoms\": [\n    \"acute periumbilical abdominal pain\",\n    \"migrating to the right lower quadrant\",\n    \"anorexia\",\n    \"low-grade pyrexia\",\n    \"nausea\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"IV Ceftriaxone\",\n      \"dosage\": \"1 g\",\n      \"frequency\": \"stat\"\n    },\n    {\n      \"name\": \"Metronidazole\",\n      \"dosage\": \"500 mg\",\n      \"frequency\": \"stat\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.1 C\",\n    \"heart_rate\": \"108 bpm\",\n    \"blood_pressure\": \"124/82 mmHg\"\n  },\n  \"diagnosis\": \"Acute Appendicitis\",\n  \"surgical_consult\": \"Yes\",\n  \"surgical_plan\": \"emergent laparoscopic appendectomy\",\n  \"inpatient_stay\": \"Yes\",\n  \"outpatient_follow_up\": \"10 days\"\n}\n```"
+    },
+    {
+      "case_id": "CASE_005",
+      "category": "Gastroenterology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 20.142,
+      "tokens_per_sec": 26.62,
+      "prompt_tokens": 967,
+      "completion_tokens": 423,
+      "total_tokens": 1390,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.6,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.6667,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9167,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 18,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Acute Appendicitis",
+        "severity_level": "Critical",
+        "symptoms": [
+          "acute periumbilical abdominal pain",
+          "migration to right lower quadrant",
+          "anorexia",
+          "low-grade pyrexia",
+          "nausea"
+        ],
+        "medications": [
+          {
+            "name": "IV Ceftriaxone 1 g",
+            "dosage": "stat"
+          },
+          {
+            "name": "Metronidazole 500 mg",
+            "dosage": "stat"
+          }
+        ],
+        "vitals_and_labs": {
+          "temperature": "38.1 C",
+          "heart_rate": "108 bpm",
+          "blood_pressure": "124/82 mmHg"
+        },
+        "follow_up_days": 10
+      },
+      "raw_response": "1. Demographics: 18-year-old male -> age=18, gender='Male'.\n2. Symptoms: Stated acute periumbilical abdominal pain, migration to right lower quadrant, anorexia, low-grade pyrexia, nausea. Negated symptoms: diarrhea, hematochezia, dysuria, testicular pain, prior surgeries (must be excluded).\n3. Diagnosis: 'Acute Appendicitis, critical surgical condition' -> primary_diagnosis='Acute Appendicitis'.\n4. Severity: 'critical surgical condition' -> severity_level='Critical'.\n5. Medications: None explicitly mentioned, but IV Ceftriaxone 1 g and Metronidazole 500 mg administered stat.\n6. Vitals/Labs: Temp 38.1 C, pulse 108 bpm, BP 124/82 mmHg.\n7. Follow-up: 'in 10 days' -> follow_up_days=10.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 18,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Acute Appendicitis\",\n  \"severity_level\": \"Critical\",\n  \"symptoms\": [\n    \"acute periumbilical abdominal pain\",\n    \"migration to right lower quadrant\",\n    \"anorexia\",\n    \"low-grade pyrexia\",\n    \"nausea\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"IV Ceftriaxone 1 g\",\n      \"dosage\": \"stat\"\n    },\n    {\n      \"name\": \"Metronidazole 500 mg\",\n      \"dosage\": \"stat\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temperature\": \"38.1 C\",\n    \"heart_rate\": \"108 bpm\",\n    \"blood_pressure\": \"124/82 mmHg\"\n  },\n  \"follow_up_days\": 10\n}\n```"
+    },
+    {
+      "case_id": "CASE_005",
+      "category": "Gastroenterology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 11.508,
+      "tokens_per_sec": 28.84,
+      "prompt_tokens": 553,
+      "completion_tokens": 214,
+      "total_tokens": 767,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.6,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.6667,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9167,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 18,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Acute Appendicitis",
+        "severity_level": "Critical",
+        "symptoms": [
+          "Acute periumbilical abdominal pain",
+          "Migration to right lower quadrant",
+          "Anorexia",
+          "Low-grade pyrexia",
+          "Nausea"
+        ],
+        "medications": [
+          {
+            "name": "Ceftriaxone",
+            "dosage": "1 g",
+            "frequency": "IV"
+          },
+          {
+            "name": "Metronidazole",
+            "dosage": "500 mg",
+            "frequency": "IV"
+          }
+        ],
+        "vitals_and_labs": {
+          "temp": "38.1 C",
+          "pulse": "108 bpm",
+          "BP": "124/82 mmHg"
+        },
+        "follow_up_days": 10
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 18,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Acute Appendicitis\",\n  \"severity_level\": \"Critical\",\n  \"symptoms\": [\"Acute periumbilical abdominal pain\", \"Migration to right lower quadrant\", \"Anorexia\", \"Low-grade pyrexia\", \"Nausea\"],\n  \"medications\": [\n    {\n      \"name\": \"Ceftriaxone\",\n      \"dosage\": \"1 g\",\n      \"frequency\": \"IV\"\n    },\n    {\n      \"name\": \"Metronidazole\",\n      \"dosage\": \"500 mg\",\n      \"frequency\": \"IV\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temp\": \"38.1 C\",\n    \"pulse\": \"108 bpm\",\n    \"BP\": \"124/82 mmHg\"\n  },\n  \"follow_up_days\": 10\n}\n```"
+    },
+    {
+      "case_id": "CASE_005",
+      "category": "Gastroenterology",
+      "technique": "Role-Expert",
+      "latency_sec": 12.399,
+      "tokens_per_sec": 28.24,
+      "prompt_tokens": 626,
+      "completion_tokens": 232,
+      "total_tokens": 858,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5714,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.75,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.75,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8304,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 18,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Acute Appendicitis, Critical Surgical Condition",
+        "severity_level": "Critical",
+        "symptoms": [
+          "Acute periumbilical abdominal pain that migrated to the right lower quadrant over the past 12 hours",
+          "Anorexia",
+          "Low-grade pyrexia",
+          "Nausea"
+        ],
+        "medications": [
+          {
+            "name": "Ceftriaxone",
+            "dosage": "1 g",
+            "frequency": "IV"
+          },
+          {
+            "name": "Metronidazole",
+            "dosage": "500 mg",
+            "frequency": "IV"
+          }
+        ],
+        "vitals_and_labs": {
+          "temp": "38.1 C",
+          "pulse": "108 bpm",
+          "BP": "124/82 mmHg"
+        },
+        "follow_up_days": 10
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 18,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Acute Appendicitis, Critical Surgical Condition\",\n  \"severity_level\": \"Critical\",\n  \"symptoms\": [\n    \"Acute periumbilical abdominal pain that migrated to the right lower quadrant over the past 12 hours\",\n    \"Anorexia\",\n    \"Low-grade pyrexia\",\n    \"Nausea\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Ceftriaxone\",\n      \"dosage\": \"1 g\",\n      \"frequency\": \"IV\"\n    },\n    {\n      \"name\": \"Metronidazole\",\n      \"dosage\": \"500 mg\",\n      \"frequency\": \"IV\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"temp\": \"38.1 C\",\n    \"pulse\": \"108 bpm\",\n    \"BP\": \"124/82 mmHg\"\n  },\n  \"follow_up_days\": 10\n}\n```"
+    },
+    {
+      "case_id": "CASE_006",
+      "category": "Rheumatology",
+      "technique": "Zero-Shot",
+      "latency_sec": 18.963,
+      "tokens_per_sec": 29.42,
+      "prompt_tokens": 258,
+      "completion_tokens": 437,
+      "total_tokens": 695,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 52,
+          "gender": "female",
+          "symptoms": {
+            "symptoms": [
+              {
+                "joint_symptom": "symmetric morning stiffness",
+                "duration": "greater than 90 minutes",
+                "affected_joints": [
+                  "MCP",
+                  "PIP"
+                ],
+                "joints": [
+                  "both hands"
+                ]
+              },
+              {
+                "symptom": "fatigue",
+                "duration": "4 months"
+              },
+              {
+                "symptom": "low-grade malaise",
+                "duration": "4 months"
+              }
+            ],
+            "excluded_symptoms": [
+              "Raynaud phenomenon",
+              "photosensitive facial rash",
+              "oral ulcers",
+              "dry eyes"
+            ]
+          },
+          "exam": {
+            "findings": [
+              {
+                "joint_findings": [
+                  "tender, boggy swelling",
+                  "8 MCP joints",
+                  "both wrists"
+                ]
+              }
+            ]
+          },
+          "serology": {
+            "results": [
+              {
+                "Rheumatoid Factor (RF)": "positive at 128 IU/mL",
+                "Anti-CCP antibodies": "highly positive (>250 U/mL)"
+              }
+            ]
+          },
+          "diagnosis": {
+            "diagnosis": "Seropositive Rheumatoid Arthritis",
+            "severity": "moderate to high disease activity (Moderate severity)"
+          },
+          "therapy": {
+            "initiated_with": [
+              "Prednisone 10 mg daily for 4 weeks"
+            ],
+            "supplemented_with": [
+              "Folic acid 1 mg PO daily"
+            ],
+            "follow_up": [
+              "routine laboratory monitoring (CBC/LFTs)",
+              "rheumatology follow-up in 30 days"
+            ]
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 52,\n    \"gender\": \"female\",\n    \"symptoms\": {\n      \"symptoms\": [\n        {\n          \"joint_symptom\": \"symmetric morning stiffness\",\n          \"duration\": \"greater than 90 minutes\",\n          \"affected_joints\": [\n            \"MCP\",\n            \"PIP\"\n          ],\n          \"joints\": [\n            \"both hands\"\n          ]\n        },\n        {\n          \"symptom\": \"fatigue\",\n          \"duration\": \"4 months\"\n        },\n        {\n          \"symptom\": \"low-grade malaise\",\n          \"duration\": \"4 months\"\n        }\n      ],\n      \"excluded_symptoms\": [\n        \"Raynaud phenomenon\",\n        \"photosensitive facial rash\",\n        \"oral ulcers\",\n        \"dry eyes\"\n      ]\n    },\n    \"exam\": {\n      \"findings\": [\n        {\n          \"joint_findings\": [\n            \"tender, boggy swelling\",\n            \"8 MCP joints\",\n            \"both wrists\"\n          ]\n        }\n      ]\n    },\n    \"serology\": {\n      \"results\": [\n        {\n          \"Rheumatoid Factor (RF)\": \"positive at 128 IU/mL\",\n          \"Anti-CCP antibodies\": \"highly positive (>250 U/mL)\"\n        }\n      ]\n    },\n    \"diagnosis\": {\n      \"diagnosis\": \"Seropositive Rheumatoid Arthritis\",\n      \"severity\": \"moderate to high disease activity (Moderate severity)\"\n    },\n    \"therapy\": {\n      \"initiated_with\": [\n        \"Methotrexate 15 mg PO once weekly\"\n      ],\n      \"supplemented_with\": [\n        \"Folic acid 1 mg PO daily\"\n      ],\n      \"initiated_with\": [\n        \"Prednisone 10 mg daily for 4 weeks\"\n      ],\n      \"follow_up\": [\n        \"routine laboratory monitoring (CBC/LFTs)\",\n        \"rheumatology follow-up in 30 days\"\n      ]\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_006",
+      "category": "Rheumatology",
+      "technique": "Few-Shot",
+      "latency_sec": 14.576,
+      "tokens_per_sec": 26.68,
+      "prompt_tokens": 982,
+      "completion_tokens": 278,
+      "total_tokens": 1260,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.75,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.75,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9375,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 52,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Seropositive Rheumatoid Arthritis",
+        "severity_level": "Moderate to High",
+        "symptoms": [
+          "symmetric morning stiffness",
+          "affecting the MCP and PIP joints of both hands",
+          "fatigue",
+          "low-grade malaise"
+        ],
+        "medications": [
+          {
+            "name": "Methotrexate",
+            "dosage": "15 mg",
+            "frequency": "once weekly"
+          },
+          {
+            "name": "Folic acid",
+            "dosage": "1 mg",
+            "frequency": "daily"
+          },
+          {
+            "name": "Prednisone",
+            "dosage": "10 mg",
+            "frequency": "daily for 4 weeks"
+          }
+        ],
+        "vitals_and_labs": {
+          "rheumatoid_factor": "positive at 128 IU/mL",
+          "anti-cyclic-citrullinated-protein antibodies": "highly positive (>250 U/mL)",
+          "erythrocyte sedimentation_rate": "48 mm/hr"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 52,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Seropositive Rheumatoid Arthritis\",\n  \"severity_level\": \"Moderate to High\",\n  \"symptoms\": [\n    \"symmetric morning stiffness\",\n    \"affecting the MCP and PIP joints of both hands\",\n    \"fatigue\",\n    \"low-grade malaise\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Methotrexate\",\n      \"dosage\": \"15 mg\",\n      \"frequency\": \"once weekly\"\n    },\n    {\n      \"name\": \"Folic acid\",\n      \"dosage\": \"1 mg\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Prednisone\",\n      \"dosage\": \"10 mg\",\n      \"frequency\": \"daily for 4 weeks\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"rheumatoid_factor\": \"positive at 128 IU/mL\",\n    \"anti-cyclic-citrullinated-protein antibodies\": \"highly positive (>250 U/mL)\",\n    \"erythrocyte sedimentation_rate\": \"48 mm/hr\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_006",
+      "category": "Rheumatology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 19.301,
+      "tokens_per_sec": 25.45,
+      "prompt_tokens": 959,
+      "completion_tokens": 396,
+      "total_tokens": 1355,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.7143,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.75,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.75,
+      "medications_f1": 1.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.6625,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 52,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Seropositive Rheumatoid Arthritis, moderate to high disease activity (Moderate severity)",
+        "symptoms": [
+          "symmetric morning stiffness",
+          "MCP and PIP joints of both hands",
+          "fatigue",
+          "low-grade malaise"
+        ],
+        "medications": [
+          {
+            "name": "Methotrexate",
+            "dosage": "15 mg PO once weekly"
+          },
+          {
+            "name": "Folic acid",
+            "dosage": "1 mg PO daily"
+          },
+          {
+            "name": "Prednisone",
+            "dosage": "10 mg daily for 4 weeks"
+          }
+        ],
+        "vitals_and_labs": {
+          "routine_labs": "CBC/LFTs",
+          "rheumatology_follow_up": "30 days"
+        }
+      },
+      "raw_response": "1. Demographics: 52-year-old female -> age=52, gender='Female'.\n2. Symptoms: Symmetric morning stiffness, MCP and PIP joints of both hands, fatigue, low-grade malaise. Negated symptoms: Raynaud phenomenon, photosensitive facial rash, oral ulcers, dry eyes (must be excluded).\n3. Diagnosis: 'Seropositive Rheumatoid Arthritis, moderate to high disease activity (Moderate severity)'.\n4. Medications: Methotrexate 15 mg PO once weekly, Folic acid 1 mg PO daily, Prednisone 10 mg daily for 4 weeks.\n5. Vitals/Labs: Not explicitly mentioned, but typically would include CBC/LFTs and routine monitoring.\n6. Follow-up: 'rheumatology follow-up in 30 days'.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 52,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Seropositive Rheumatoid Arthritis, moderate to high disease activity (Moderate severity)\",\n  \"symptoms\": [\n    \"symmetric morning stiffness\",\n    \"MCP and PIP joints of both hands\",\n    \"fatigue\",\n    \"low-grade malaise\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Methotrexate\",\n      \"dosage\": \"15 mg PO once weekly\"\n    },\n    {\n      \"name\": \"Folic acid\",\n      \"dosage\": \"1 mg PO daily\"\n    },\n    {\n      \"name\": \"Prednisone\",\n      \"dosage\": \"10 mg daily for 4 weeks\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"routine_labs\": \"CBC/LFTs\",\n    \"rheumatology_follow_up\": \"30 days\"\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_006",
+      "category": "Rheumatology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 11.089,
+      "tokens_per_sec": 27.23,
+      "prompt_tokens": 545,
+      "completion_tokens": 185,
+      "total_tokens": 730,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.75,
+      "symptoms_f1": 0.8571,
+      "medications_f1": 0.8,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.9243,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 52,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Seropositive Rheumatoid Arthritis",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "Symmetric morning stiffness lasting greater than 90 minutes",
+          "Fatigue",
+          "Low-grade malaise"
+        ],
+        "medications": [
+          {
+            "name": "Methotrexate",
+            "dosage": "15 mg PO once weekly",
+            "frequency": "daily"
+          },
+          {
+            "name": "Folic acid",
+            "dosage": "1 mg PO daily",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "ESR": "48 mm/hr"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 52,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Seropositive Rheumatoid Arthritis\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\"Symmetric morning stiffness lasting greater than 90 minutes\", \"Fatigue\", \"Low-grade malaise\"],\n  \"medications\": [\n    {\n      \"name\": \"Methotrexate\",\n      \"dosage\": \"15 mg PO once weekly\",\n      \"frequency\": \"daily\"\n    },\n    {\n      \"name\": \"Folic acid\",\n      \"dosage\": \"1 mg PO daily\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"ESR\": \"48 mm/hr\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_006",
+      "category": "Rheumatology",
+      "technique": "Role-Expert",
+      "latency_sec": 12.928,
+      "tokens_per_sec": 27.65,
+      "prompt_tokens": 618,
+      "completion_tokens": 243,
+      "total_tokens": 861,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.5,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.6667,
+      "symptoms_recall": 0.5,
+      "symptoms_f1": 0.5714,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.7679,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 52,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Seropositive Rheumatoid Arthritis, moderate to high disease activity (Moderate severity)",
+        "severity_level": "Moderate",
+        "symptoms": [
+          "Symmetric morning stiffness lasting greater than 90 minutes, affecting the MCP and PIP joints of both hands",
+          "Fatigue",
+          "Low-grade malaise"
+        ],
+        "medications": [
+          {
+            "name": "Methotrexate",
+            "dosage": "15 mg PO once weekly",
+            "frequency": "Weekly"
+          },
+          {
+            "name": "Folic acid",
+            "dosage": "1 mg PO daily",
+            "frequency": "Daily"
+          },
+          {
+            "name": "Prednisone",
+            "dosage": "10 mg daily",
+            "frequency": "Daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "ESR": "48 mm/hr"
+        },
+        "follow_up_days": 30
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 52,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Seropositive Rheumatoid Arthritis, moderate to high disease activity (Moderate severity)\",\n  \"severity_level\": \"Moderate\",\n  \"symptoms\": [\n    \"Symmetric morning stiffness lasting greater than 90 minutes, affecting the MCP and PIP joints of both hands\",\n    \"Fatigue\",\n    \"Low-grade malaise\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Methotrexate\",\n      \"dosage\": \"15 mg PO once weekly\",\n      \"frequency\": \"Weekly\"\n    },\n    {\n      \"name\": \"Folic acid\",\n      \"dosage\": \"1 mg PO daily\",\n      \"frequency\": \"Daily\"\n    },\n    {\n      \"name\": \"Prednisone\",\n      \"dosage\": \"10 mg daily\",\n      \"frequency\": \"Daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"ESR\": \"48 mm/hr\"\n  },\n  \"follow_up_days\": 30\n}\n```"
+    },
+    {
+      "case_id": "CASE_007",
+      "category": "Dermatology",
+      "technique": "Zero-Shot",
+      "latency_sec": 10.901,
+      "tokens_per_sec": 30.19,
+      "prompt_tokens": 218,
+      "completion_tokens": 216,
+      "total_tokens": 434,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 36,
+          "gender": "Male",
+          "symptoms": {
+            "symptom": "Pruritus",
+            "location": "Extensor surfaces of elbows, knees, and scalp"
+          },
+          "diagnosis": {
+            "psoriasis": "Chronic Plaque Psoriasis",
+            "severity": "Mild"
+          },
+          "treatment": {
+            "topical_clobetasol_propionate": {
+              "strength": "0.05%",
+              "application": "BID (twice daily)"
+            },
+            "calcipotriene_0_005": {
+              "strength": "0.005%",
+              "application": "Daily maintenance"
+            },
+            "emollient_cream": {
+              "application": "Liberal"
+            }
+          },
+          "follow_up": {
+            "recommendation": "Clinic re-evaluation in 28 days"
+          }
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 36,\n    \"gender\": \"Male\",\n    \"symptoms\": {\n      \"symptom\": \"Pruritus\",\n      \"location\": \"Extensor surfaces of elbows, knees, and scalp\"\n    },\n    \"diagnosis\": {\n      \"psoriasis\": \"Chronic Plaque Psoriasis\",\n      \"severity\": \"Mild\"\n    },\n    \"treatment\": {\n      \"topical_clobetasol_propionate\": {\n        \"strength\": \"0.05%\",\n        \"application\": \"BID (twice daily)\"\n      },\n      \"calcipotriene_0_005\": {\n        \"strength\": \"0.005%\",\n        \"application\": \"Daily maintenance\"\n      },\n      \"emollient_cream\": {\n        \"application\": \"Liberal\"\n      }\n    },\n    \"follow_up\": {\n      \"recommendation\": \"Clinic re-evaluation in 28 days\"\n    }\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_007",
+      "category": "Dermatology",
+      "technique": "Few-Shot",
+      "latency_sec": 11.102,
+      "tokens_per_sec": 26.98,
+      "prompt_tokens": 942,
+      "completion_tokens": 197,
+      "total_tokens": 1139,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 1.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 36,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Chronic Plaque Psoriasis",
+        "severity_level": "Mild",
+        "symptoms": [
+          "erythematous plaques",
+          "silvery-white scales",
+          "pruritus"
+        ],
+        "medications": [
+          {
+            "name": "Clobetasol propionate 0.05% ointment",
+            "dosage": "BID (twice daily)"
+          },
+          {
+            "name": "Calcipotriene 0.005% cream",
+            "dosage": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "physical_exam": "classic plaque psoriasis covering approximately 4% of total body surface area"
+        },
+        "follow_up_days": 28
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 36,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Chronic Plaque Psoriasis\",\n  \"severity_level\": \"Mild\",\n  \"symptoms\": [\n    \"erythematous plaques\",\n    \"silvery-white scales\",\n    \"pruritus\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Clobetasol propionate 0.05% ointment\",\n      \"dosage\": \"BID (twice daily)\"\n    },\n    {\n      \"name\": \"Calcipotriene 0.005% cream\",\n      \"dosage\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"physical_exam\": \"classic plaque psoriasis covering approximately 4% of total body surface area\"\n  },\n  \"follow_up_days\": 28\n}\n```"
+    },
+    {
+      "case_id": "CASE_007",
+      "category": "Dermatology",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 16.182,
+      "tokens_per_sec": 26.74,
+      "prompt_tokens": 919,
+      "completion_tokens": 331,
+      "total_tokens": 1250,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 1.0,
+      "symptoms_f1": 1.0,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 1.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 36,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Chronic Plaque Psoriasis",
+        "severity_level": "Mild",
+        "symptoms": [
+          "erythematous plaques",
+          "silvery-white scales",
+          "pruritus"
+        ],
+        "medications": [
+          {
+            "name": "Clobetasol propionate 0.05% ointment",
+            "dosage": "BID"
+          },
+          {
+            "name": "Calcipotriene 0.005% cream",
+            "dosage": "daily"
+          }
+        ],
+        "follow_up_days": 28
+      },
+      "raw_response": "1. Demographics: 36-year-old male -> age=36, gender='Male'.\n2. Symptoms: Explicitly stated erythematous plaques, silvery-white scales, pruritus. Negated symptoms: joint pain, nail pitting, sausage digits (dactylitis), recent streptococcal throat infections (must be excluded).\n3. Diagnosis: Assessment explicitly states 'Chronic Plaque Psoriasis'.\n4. Severity: 'mild severity' -> severity_level='Mild'.\n5. Medications: Topical Clobetasol propionate 0.05% ointment BID, Calcipotriene 0.005% cream daily.\n6. Follow-up: 'in 28 days' -> follow_up_days=28.\n\nFinal JSON:\n```json\n{\n  \"patient_age\": 36,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Chronic Plaque Psoriasis\",\n  \"severity_level\": \"Mild\",\n  \"symptoms\": [\n    \"erythematous plaques\",\n    \"silvery-white scales\",\n    \"pruritus\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Clobetasol propionate 0.05% ointment\",\n      \"dosage\": \"BID\"\n    },\n    {\n      \"name\": \"Calcipotriene 0.005% cream\",\n      \"dosage\": \"daily\"\n    }\n  ],\n  \"follow_up_days\": 28\n}\n```"
+    },
+    {
+      "case_id": "CASE_007",
+      "category": "Dermatology",
+      "technique": "Schema-Constrained",
+      "latency_sec": 9.41,
+      "tokens_per_sec": 28.88,
+      "prompt_tokens": 505,
+      "completion_tokens": 164,
+      "total_tokens": 669,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.3333,
+      "symptoms_f1": 0.5,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.875,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 36,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Chronic Plaque Psoriasis",
+        "severity_level": "Mild",
+        "symptoms": [
+          "Pruritus"
+        ],
+        "medications": [
+          {
+            "name": "Clobetasol propionate 0.05% ointment",
+            "dosage": "BID",
+            "frequency": "Daily"
+          },
+          {
+            "name": "Calcipotriene 0.005% cream",
+            "dosage": "Daily",
+            "frequency": "Daily"
+          }
+        ],
+        "vitals_and_labs": {},
+        "follow_up_days": 28
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 36,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Chronic Plaque Psoriasis\",\n  \"severity_level\": \"Mild\",\n  \"symptoms\": [\"Pruritus\"],\n  \"medications\": [\n    {\n      \"name\": \"Clobetasol propionate 0.05% ointment\",\n      \"dosage\": \"BID\",\n      \"frequency\": \"Daily\"\n    },\n    {\n      \"name\": \"Calcipotriene 0.005% cream\",\n      \"dosage\": \"Daily\",\n      \"frequency\": \"Daily\"\n    }\n  ],\n  \"vitals_and_labs\": {},\n  \"follow_up_days\": 28\n}\n```"
+    },
+    {
+      "case_id": "CASE_007",
+      "category": "Dermatology",
+      "technique": "Role-Expert",
+      "latency_sec": 10.924,
+      "tokens_per_sec": 28.66,
+      "prompt_tokens": 578,
+      "completion_tokens": 204,
+      "total_tokens": 782,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 1.0,
+      "severity_f1": 1.0,
+      "symptoms_precision": 1.0,
+      "symptoms_recall": 0.6667,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.95,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 36,
+        "patient_gender": "Male",
+        "primary_diagnosis": "Chronic Plaque Psoriasis",
+        "severity_level": "Mild",
+        "symptoms": [
+          "Erythematous plaques covered by silvery-white scales",
+          "Pruritus"
+        ],
+        "medications": [
+          {
+            "name": "Clobetasol propionate 0.05% ointment",
+            "dosage": "0.05%",
+            "frequency": "BID"
+          },
+          {
+            "name": "Calcipotriene 0.005% cream",
+            "dosage": "0.005%",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "psoriasis_area": "4% of total body surface area"
+        },
+        "follow_up_days": 28
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 36,\n  \"patient_gender\": \"Male\",\n  \"primary_diagnosis\": \"Chronic Plaque Psoriasis\",\n  \"severity_level\": \"Mild\",\n  \"symptoms\": [\"Erythematous plaques covered by silvery-white scales\", \"Pruritus\"],\n  \"medications\": [\n    {\n      \"name\": \"Clobetasol propionate 0.05% ointment\",\n      \"dosage\": \"0.05%\",\n      \"frequency\": \"BID\"\n    },\n    {\n      \"name\": \"Calcipotriene 0.005% cream\",\n      \"dosage\": \"0.005%\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"psoriasis_area\": \"4% of total body surface area\"\n  },\n  \"follow_up_days\": 28\n}\n```"
+    },
+    {
+      "case_id": "CASE_008",
+      "category": "Psychiatry",
+      "technique": "Zero-Shot",
+      "latency_sec": 11.903,
+      "tokens_per_sec": 30.13,
+      "prompt_tokens": 199,
+      "completion_tokens": 249,
+      "total_tokens": 448,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 0.0,
+      "demographics_f1": 0.0,
+      "diagnosis_f1": 0.0,
+      "severity_f1": 0.0,
+      "symptoms_precision": 0.0,
+      "symptoms_recall": 0.0,
+      "symptoms_f1": 0.0,
+      "medications_f1": 0.0,
+      "followup_f1": 0.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.0,
+      "parse_error": null,
+      "parsed_output": {
+        "patient": {
+          "age": 42,
+          "gender": "female",
+          "symptoms": [
+            "persistent depressed mood",
+            "profound anhedonia",
+            "terminal insomnia",
+            "difficulty concentrating at work"
+          ],
+          "diagnosis": {
+            "diagnosis": "Major Depressive Disorder",
+            "episode": "single episode",
+            "severity": "severe",
+            "features": "without psychotic features"
+          },
+          "treatment": [
+            {
+              "medication": "Sertraline hydrochloride",
+              "dose": "50 mg PO once daily in the morning",
+              "duration": "2 weeks"
+            },
+            {
+              "therapy": "cognitive behavioral therapy (CBT)",
+              "duration": "14 days"
+            }
+          ],
+          "follow-up": {
+            "visit": "close psychiatric clinic visit",
+            "duration": "14 days"
+          },
+          "assessment": {
+            "screening_score": 19,
+            "total_score": 27
+          },
+          "symptoms_during": "past 6 weeks"
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient\": {\n    \"age\": 42,\n    \"gender\": \"female\",\n    \"symptoms\": [\n      \"persistent depressed mood\",\n      \"profound anhedonia\",\n      \"terminal insomnia\",\n      \"difficulty concentrating at work\"\n    ],\n    \"diagnosis\": {\n      \"diagnosis\": \"Major Depressive Disorder\",\n      \"episode\": \"single episode\",\n      \"severity\": \"severe\",\n      \"features\": \"without psychotic features\"\n    },\n    \"treatment\": [\n      {\n        \"medication\": \"Sertraline hydrochloride\",\n        \"dose\": \"50 mg PO once daily in the morning\",\n        \"duration\": \"2 weeks\"\n      },\n      {\n        \"therapy\": \"cognitive behavioral therapy (CBT)\",\n        \"duration\": \"14 days\"\n      }\n    ],\n    \"follow-up\": {\n      \"visit\": \"close psychiatric clinic visit\",\n      \"duration\": \"14 days\"\n    },\n    \"assessment\": {\n      \"screening_score\": 19,\n      \"total_score\": 27\n    },\n    \"symptoms_during\": \"past 6 weeks\"\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_008",
+      "category": "Psychiatry",
+      "technique": "Few-Shot",
+      "latency_sec": 11.175,
+      "tokens_per_sec": 27.03,
+      "prompt_tokens": 923,
+      "completion_tokens": 200,
+      "total_tokens": 1123,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.4615,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.8,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8154,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 42,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Major Depressive Disorder, single episode, severe severity without psychotic features",
+        "severity_level": "Severe",
+        "symptoms": [
+          "persistent depressed mood",
+          "profound anhedonia",
+          "terminal insomnia",
+          "difficulty concentrating at work",
+          "severe psychomotor retardation"
+        ],
+        "medications": [
+          {
+            "name": "Sertraline hydrochloride",
+            "dosage": "50 mg",
+            "frequency": "once daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "phq-9_depression_score": 19
+        },
+        "follow_up_days": 14,
+        "additional_treatment": {
+          "cognitive_behavioral_therapy": "referred for"
+        }
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 42,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Major Depressive Disorder, single episode, severe severity without psychotic features\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"persistent depressed mood\",\n    \"profound anhedonia\",\n    \"terminal insomnia\",\n    \"difficulty concentrating at work\",\n    \"severe psychomotor retardation\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sertraline hydrochloride\",\n      \"dosage\": \"50 mg\",\n      \"frequency\": \"once daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"phq-9_depression_score\": 19\n  },\n  \"follow_up_days\": 14,\n  \"additional_treatment\": {\n    \"cognitive_behavioral_therapy\": \"referred for\"\n  }\n}\n```"
+    },
+    {
+      "case_id": "CASE_008",
+      "category": "Psychiatry",
+      "technique": "Chain-of-Thought",
+      "latency_sec": 17.941,
+      "tokens_per_sec": 24.93,
+      "prompt_tokens": 900,
+      "completion_tokens": 353,
+      "total_tokens": 1253,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.4615,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.8,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8154,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 42,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Major Depressive Disorder, single episode, severe severity without psychotic features",
+        "severity_level": "Severe",
+        "symptoms": [
+          "persistent depressed mood",
+          "profound anhedonia",
+          "terminal insomnia",
+          "difficulty concentrating at work",
+          "severe psychomotor retardation"
+        ],
+        "medications": [
+          {
+            "name": "Sertraline hydrochloride",
+            "dosage": "50 mg PO once daily"
+          }
+        ],
+        "follow_up_days": 14
+      },
+      "raw_response": "1. **Demographics:**\n   - Age: 42 years old\n   - Gender: Female\n\n2. **Symptoms:**\n   - Persistent depressed mood\n   - Profound anhedonia\n   - Terminal insomnia\n   - Difficulty concentrating at work\n   - Severe psychomotor retardation\n   - Denies suicidal ideation, visual or auditory hallucinations, manic episodes, and substance abuse\n\n3. **Diagnosis:**\n   - Major Depressive Disorder, single episode, severe severity without psychotic features\n\n4. **Severity:**\n   - Severe\n\n5. **Medications:**\n   - Sertraline hydrochloride 50 mg PO once daily\n   - Plan to titrate to 100 mg after 2 weeks\n\n6. **Vitals/Labs:**\n   - Not explicitly provided in the clinical note\n\n7. **Follow-up:**\n   - Close psychiatric clinic visit arranged in 14 days\n\n### Final JSON:\n```json\n{\n  \"patient_age\": 42,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Major Depressive Disorder, single episode, severe severity without psychotic features\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"persistent depressed mood\",\n    \"profound anhedonia\",\n    \"terminal insomnia\",\n    \"difficulty concentrating at work\",\n    \"severe psychomotor retardation\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sertraline hydrochloride\",\n      \"dosage\": \"50 mg PO once daily\"\n    }\n  ],\n  \"follow_up_days\": 14\n}\n```"
+    },
+    {
+      "case_id": "CASE_008",
+      "category": "Psychiatry",
+      "technique": "Schema-Constrained",
+      "latency_sec": 9.223,
+      "tokens_per_sec": 27.85,
+      "prompt_tokens": 486,
+      "completion_tokens": 156,
+      "total_tokens": 642,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.4615,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.8,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8154,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 42,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Major Depressive Disorder, single episode, severe severity without psychotic features",
+        "severity_level": "Severe",
+        "symptoms": [
+          "Persistent depressed mood",
+          "Profound anhedonia",
+          "Terminal insomnia",
+          "Difficulty concentrating at work",
+          "Severe psychomotor retardation"
+        ],
+        "medications": [
+          {
+            "name": "Sertraline hydrochloride",
+            "dosage": "50 mg PO once daily",
+            "frequency": "morning"
+          }
+        ],
+        "vitals_and_labs": {},
+        "follow_up_days": 14
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 42,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Major Depressive Disorder, single episode, severe severity without psychotic features\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\"Persistent depressed mood\", \"Profound anhedonia\", \"Terminal insomnia\", \"Difficulty concentrating at work\", \"Severe psychomotor retardation\"],\n  \"medications\": [\n    {\n      \"name\": \"Sertraline hydrochloride\",\n      \"dosage\": \"50 mg PO once daily\",\n      \"frequency\": \"morning\"\n    }\n  ],\n  \"vitals_and_labs\": {},\n  \"follow_up_days\": 14\n}\n```"
+    },
+    {
+      "case_id": "CASE_008",
+      "category": "Psychiatry",
+      "technique": "Role-Expert",
+      "latency_sec": 10.565,
+      "tokens_per_sec": 27.14,
+      "prompt_tokens": 559,
+      "completion_tokens": 187,
+      "total_tokens": 746,
+      "strict_json_valid": 1.0,
+      "schema_coverage": 1.0,
+      "demographics_f1": 1.0,
+      "diagnosis_f1": 0.4615,
+      "severity_f1": 1.0,
+      "symptoms_precision": 0.8,
+      "symptoms_recall": 0.8,
+      "symptoms_f1": 0.8,
+      "medications_f1": 1.0,
+      "followup_f1": 1.0,
+      "negation_violation_rate": 0.0,
+      "overall_f1": 0.8154,
+      "parse_error": null,
+      "parsed_output": {
+        "patient_age": 42,
+        "patient_gender": "Female",
+        "primary_diagnosis": "Major Depressive Disorder, single episode, severe severity without psychotic features",
+        "severity_level": "Severe",
+        "symptoms": [
+          "Persistent depressed mood",
+          "Profound anhedonia",
+          "Terminal insomnia",
+          "Difficulty concentrating at work",
+          "Severe psychomotor retardation"
+        ],
+        "medications": [
+          {
+            "name": "Sertraline hydrochloride",
+            "dosage": "50 mg PO once daily in the morning",
+            "frequency": "daily"
+          }
+        ],
+        "vitals_and_labs": {
+          "PHQ-9 depression screening score": "19 out of 27"
+        },
+        "follow_up_days": 14
+      },
+      "raw_response": "```json\n{\n  \"patient_age\": 42,\n  \"patient_gender\": \"Female\",\n  \"primary_diagnosis\": \"Major Depressive Disorder, single episode, severe severity without psychotic features\",\n  \"severity_level\": \"Severe\",\n  \"symptoms\": [\n    \"Persistent depressed mood\",\n    \"Profound anhedonia\",\n    \"Terminal insomnia\",\n    \"Difficulty concentrating at work\",\n    \"Severe psychomotor retardation\"\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Sertraline hydrochloride\",\n      \"dosage\": \"50 mg PO once daily in the morning\",\n      \"frequency\": \"daily\"\n    }\n  ],\n  \"vitals_and_labs\": {\n    \"PHQ-9 depression screening score\": \"19 out of 27\"\n  },\n  \"follow_up_days\": 14\n}\n```"
+    }
+  ]
+}
